@@ -1,0 +1,7 @@
+{
+  "name": "Meus Posts",
+  "description": "Primeiros testes com Ruby.",
+  "image": "heroku/ruby",
+  "repository": "https://github.com/heroku/ruby-getting-started",
+  "keywords": ["ruby", "rails" ]
+}
