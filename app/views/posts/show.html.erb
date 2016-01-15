@@ -27,10 +27,10 @@
 
 <h2 class="ls-title-3">Comments</h2>
 <% @post.comments.each do |comment| %>
-  <p class="container-fluid">
+  <div>
     <p><strong>Author:</strong> <%= comment.author %></p>
     <p><strong>Comment:</strong> <%= comment.text %></p>
-  </p>
+  </div>
 <% end %>
 
 <%= form_for [@post, @post.comments.build] do |f| %>
