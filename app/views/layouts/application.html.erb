@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MeusPosts</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="ls-topbar">
+      <h1>Meus Posts</h1>
+      <div class="ls-notification-topbar">
+        <%= link_to 'Categories', categories_path, :class => 'ls-btn' %>
+        <%= link_to 'Posts', posts_path, :class => 'ls-btn' %>
+      </div>
+  </div>
+<main class="ls-main">
+  <%= yield %>
+</main>
+
+</body>
+</html>

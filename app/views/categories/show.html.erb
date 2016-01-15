@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @category.category %>
+</p>
+
+<p>
+  <%= link_to 'Edit', edit_category_path(@category), :class => 'ls-btn' %>
+  <%= link_to 'Back', categories_path, :class => 'ls-btn' %>
+</p>

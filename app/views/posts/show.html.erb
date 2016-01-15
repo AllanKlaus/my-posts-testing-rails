@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @post.category.category %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @post.author %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @post.text %>
+</p>
+
+<p>
+  <%= link_to 'Edit', edit_post_path(@post), :class => 'ls-btn' %>
+  <%= link_to 'Back', posts_path, :class => 'ls-btn' %>
+</p>
+
+<h2 class="ls-title-3">Comments</h2>
+<% @post.comments.each do |comment| %>
+  <p class="container-fluid">
+    <p><strong>Author:</strong> <%= comment.author %></p>
+    <p><strong>Comment:</strong> <%= comment.text %></p>
+  </p>
+<% end %>
+
+<%= form_for [@post, @post.comments.build] do |f| %>
+  <div class="ls-label">
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+  </div>
+  <div class="ls-label">
+    <%= f.label :text %>
+    <%= f.text_area :text %>
+  </div>
+
+  <%= f.submit "Create Comment", :class => 'ls-btn' %>
+<% end %>
